@@ -1,0 +1,30 @@
+app:
+#  image: eeacms/plone
+  build: app
+  expose:
+    - "80"
+  ports:
+    - "80:8080"
+  volumes:
+    - resources:/var/buildout/resources
+    - var:/var/buildout/var
+  environment:
+    BUILDOUT_EGGS: rapido.plone
+    INSTANCE_zserver-threads: 8
+  volumes_from:
+      - plone_db_var
+      - plone_blobs
+  #command: bin/instance fg
+
+
+plone_blobs:
+    image: alpine
+    command: /bin/true
+    volumes:
+        - /opt/zope/var/blobstorage
+
+plone_db_var:
+    image: alpine
+    command: /bin/true
+    volumes:
+        - /opt/zope/var/filestorage

@@ -1,0 +1,20 @@
+<div>
+        ${elements/top_plugins}
+</div>
+
+
+<div>
+    Want to see how popular your site plugins are? Submit your plugins below.
+    <ol>
+        <li>Go to Site Setup > Management Interface on your plone site</li>
+        <li>Select "Script (Python)" then click "Add" from the top right</li>
+        <li>Enter "plonehome" for your id and click "Add and edit"</li>
+        <li>Paste the following script <br/>
+            <textarea tal:content="elements/script_quoted">{script_quoted}</textarea></li>
+        <li>Click "Save changes" then the "Test" tab</li>
+        <li>Click "Submit to plonecensus"</li>
+        <li>You will be asked to login using your github account</li>
+        <li>You can review the submission before it is saved in the census, including
+        filtering plugins that are private and anonalising your site url</li>
+    </ol>
+</div>

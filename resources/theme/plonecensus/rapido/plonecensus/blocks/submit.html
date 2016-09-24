@@ -1,0 +1,12 @@
+<div>
+    {data}
+</div>
+
+Insert this into a pythin script
+<textarea >
+data = context.portal_quickinstaller.listInstalledProducts()
+return """<form method="POST" action="http://localhost:8080/Plone/census/@@rapido/plonecensus/block/submit/add">
+<textarea name="data">%s</textarea><input type="submit">
+</form>""" % data
+
+</textarea>

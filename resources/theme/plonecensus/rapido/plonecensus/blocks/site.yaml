@@ -1,0 +1,11 @@
+elements:
+  sitedomain:
+    type: TEXT
+    index: KEYWORD
+  installed:
+    type: TEXT
+    label: packages and versions
+  datesubmitted:
+    type: DATETIME
+  user:
+    type: TEXT

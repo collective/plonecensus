@@ -1,0 +1,13 @@
+elements:
+  install_count:
+    type: NUMBER
+    index: FieldIndex
+
+  addon_name:
+    type: TEXT
+    index TEXT
+
+  sites:
+    type: BASIC
+
+

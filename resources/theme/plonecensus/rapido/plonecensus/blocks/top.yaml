@@ -1,0 +1,13 @@
+elements:
+    top_plugins:
+      type: BASIC
+      label: List of most popular plugins
+
+    script_quoted:
+      type: BASIC
+
+    result:
+      type: BASIC
+    submit:
+      type: ACTION
+

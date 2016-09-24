@@ -1,0 +1,11 @@
+
+
+# Problems
+
+- can't access an index before you create the data. Get a KeyError
+
+
+$ docker-machine create --driver amazonec2 --amazonec2-region ap-southeast-1 falling
+$ eval $(docker-machine env falling)
+# bin/hostout app dockerfile app
+$ docker-compose up -d

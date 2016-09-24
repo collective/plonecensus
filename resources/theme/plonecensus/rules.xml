@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- Include the backend theme -->
+  <xi:include href="++theme++barceloneta/rules.xml" />
+
+  <rules css:if-content="body.frontend#visual-portal-wrapper">
+      <after css:theme-children="head">
+            <link rel="stylesheet" type="text/css" href="++theme++falling/falling.css"/>
+            <script type="text/javascript" src="++theme++falling/falling.js"></script>
+      </after>
+    <!-- Your diazo front end rules go here -->
+
+    <replace css:content-children="#content-core" if-path="census">
+        <include css:content="form" href="@@rapido/plonecensus/block/top" />
+    </replace>
+
+    <replace css:content-children="#content-core" if-path="census/submit">
+        <include css:content="form" href="@@rapido/plonecensus/block/submit" />
+    </replace>
+
+    <rules if-path="@@rapido/view/addon">
+        <replace css:content="#content">
+            <include css:content="form" href="@@rapido/falling/block/addon/$2" />
+        </replace>
+    </rules>
+
+   </rules>
+</rules>
+
+
+

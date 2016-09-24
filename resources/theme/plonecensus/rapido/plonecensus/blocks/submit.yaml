@@ -1,0 +1,5 @@
+elements:
+    post_here:
+      type: BASIC
+    data:
+      type: TEXT
